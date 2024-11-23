@@ -7,10 +7,13 @@ def main(num: int) -> str:
         return(f"{num} is odd.")
     
 if __name__ == "__main__":
-    user_input = input("Provide your number to check if it's even or odd: ")
-    try:
-        number = int(user_input)
-        print(main(number))
 
-    except:
-        print(f"Enter a valid number. [{user_input}] is not a number.")
+    while True:
+        user_input = input("Provide your number to check if it's even or odd: ")
+        try:
+            number = int(user_input)
+            print(main(number))
+            break
+
+        except:
+            print(f"Enter a valid number. [{user_input}] is not a number.")
